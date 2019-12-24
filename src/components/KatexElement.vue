@@ -45,6 +45,10 @@ export default {
       type: [Boolean, String, Function],
       default: 'warn',
     },
+    trust: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     options() {
@@ -59,6 +63,7 @@ export default {
             maxExpand: this.maxExpand,
             allowedProtocols: this.allowedProtocols,
             strict: this.strict,
+            trust: this.trust,
           });
     },
     math() {
